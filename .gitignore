@@ -3,3 +3,4 @@ _site/
 node_modules/
 assets/development/stylesheets/main.css.map
 assets/development/stylesheets/main.css
+.DS_Store
