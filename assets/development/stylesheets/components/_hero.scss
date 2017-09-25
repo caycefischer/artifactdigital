@@ -5,7 +5,7 @@
   background: $dark-color url('/assets/production/images/bg.jpg') center center no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  padding-bottom: 12rem;
+  padding-bottom: 6rem;
   padding-top: 6rem;
 }
 
@@ -13,25 +13,36 @@
   width: 7rem;
 }
 
-  .slogan {
-    max-width: 70rem;
-    padding: 0;
-    font-size: 3.2rem;
-    font-family: $font-sans;
-    font-weight: $font-weight-sans-light;
-    line-height: 1.2;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-    color: $dark-color;
+.slogan, .dek {
+  max-width: 70rem;
+  margin-top: 4rem;
+}
 
-    span {
-        display: inline-block;
-        background: $brand-color;
-        margin: 0 1rem 1rem 0;
-        padding: 0.7rem 1rem 0 1rem;
-    }
+.slogan {
+  padding: 0;
+  font-size: 3.2rem;
+  font-family: $font-sans;
+  font-weight: $font-weight-sans-light;
+  line-height: 1.2;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: $dark-color;
 
-    @media (min-width: 761px) {
-      font-size: 4.6rem;
-    }
+  span {
+      display: inline-block;
+      background: $brand-color;
+      margin: 0 1rem 1rem 0;
+      padding: 0.7rem 1rem 0 1rem;
   }
+
+  @media (min-width: 761px) {
+    font-size: 4.6rem;
+  }
+}
+
+.dek {
+  font-weight: $font-weight-sans-book;
+  font-size: 1.8rem;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
