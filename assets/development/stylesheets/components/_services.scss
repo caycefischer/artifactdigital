@@ -1,0 +1,23 @@
+/* services
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.services {
+  @include flexbox();
+  @include flexdirection(column);
+
+  @media (min-width: 761px) {
+      @include flexdirection(row);
+  }
+}
+
+  .service-alpha, .service-beta {
+    @include flex(1);
+  }
+
+  .service-alpha {
+    background-color: $lighter-middle-color;
+  }
+
+  .service-beta {
+    background-color: $middle-color;
+  }

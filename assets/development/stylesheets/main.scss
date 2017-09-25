@@ -18,6 +18,7 @@ $text-color:          #111;
 $background-color:    #fff;
 $brand-color:         #ffd503;
 $middle-color:        #536670;
+$lighter-middle-color: #6D838F;
 $dark-color:       #19242a;
 $darkest-color: #10171b;
 
@@ -33,6 +34,46 @@ $content-width:       800px;
 $on-palm:             600px;
 $on-laptop:           800px;
 
+
+/* mixins
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin flex($values) {
+  -webkit-box-flex: $values;
+  -moz-box-flex:  $values;
+  -webkit-flex:  $values;
+  -ms-flex:  $values;
+  flex:  $values;
+}
+
+@mixin flexorder($val) {
+  -webkit-box-ordinal-group: $val;  
+  -moz-box-ordinal-group: $val;     
+  -ms-flex-order: $val;     
+  -webkit-order: $val;  
+  order: $val;
+}
+
+@mixin flexdirection($val) {
+  -webkit-flex-direction: $val;  
+  -moz-flex-direction: $val;     
+  -ms-flex-direction: $val;     
+  flex-direction: $val;
+}
+
+@mixin flex($val) {
+  -webkit-flex: $val;  
+  -moz-flex: $val;
+  -ms-flex: $val;     
+  flex: $val;
+}
 
 
 /* base stylin
@@ -70,6 +111,7 @@ body {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @import "components/navbar";
 @import "components/hero";
+@import "components/services";
 
 /* one-off stylin
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
