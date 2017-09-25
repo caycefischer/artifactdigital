@@ -12,6 +12,8 @@
 
   .service-alpha, .service-beta {
     @include flex(1);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 
   .service-alpha {
@@ -21,3 +23,32 @@
   .service-beta {
     background-color: $middle-color;
   }
+
+    .service-icon {
+      width: 5.5rem;
+      height: auto;
+      display: inline-block;
+      padding: 0 0 1rem 0;
+    }
+
+    .services p, .services h2 {
+      padding: 0;
+      margin: 0;
+      color: #fff;
+      
+    }
+
+    .services h2 {
+      margin-bottom: 2rem;
+      font-family: $font-mono;
+      font-weight: $font-weight-mono-bold;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      -webkit-font-smoothing: antialiased;
+      letter-spacing: 0.1px;
+    }
+
+    .services p {
+      font-size: 1.4rem;
+      line-height: 2.2rem;
+    }
