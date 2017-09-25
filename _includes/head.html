@@ -2,7 +2,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title>{% if page.title == "Home" %}{{ site.title }}{% else %}{{ page.title }} | {{site.title}} {% endif %}</title>
+  <title>{{ page.title }}</title>
 
   <!-- Fira webfonts -->
   <link href="https://fonts.googleapis.com/css?family=Fira+Mono:500,700|Fira+Sans:200,400" rel="stylesheet">
@@ -17,7 +17,4 @@
 
   <!-- Favicon -->
   <!-- <link rel="shortcut icon" href="{{ site.url }}/assets/production/favicon.ico"> -->
-
-  <!-- RSS -->
-  <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ site.url }}{{ site.baseurl }}atom.xml">
 </head>

@@ -1,12 +1,18 @@
-<nav class="navbar navbar-fixed-top main">
-  <div class="container navbar-container">
-    <ul class="navbar-list navbar-links">
-      <li class="navbar-item">
-        <a class="navbar-link active" href="{{ site.baseurl }}/">Artifact.Digital</a>
-      </li>
-      <li class="navbar-item">
-        <a class="navbar-link" href="{{ site.baseurl }}/about">About</a>
-      </li>
-    </ul>
-  </div>
+<nav class="navbar container {{page.active}}">
+	<ul class="navbar-list">
+	  <li class="navbar-item">
+	  	{% if page.active == "home" %}
+	    <a class="navbar-link active" href="{{ site.baseurl }}/">Artifact.Digital</a>
+	    {% else %}
+	    <a class="navbar-link" href="{{ site.baseurl }}/">Artifact.Digital</a>
+	    {% endif %}
+	  </li>
+	  <li class="navbar-item">
+	  	{% if page.active == "alexleitch" %}
+	    <a class="navbar-link active" href="{{ site.baseurl }}/alex-leitch">Alex Leitch</a>
+	    {% else %}
+	    <a class="navbar-link" href="{{ site.baseurl }}/alex-leitch">Alex Leitch</a>
+	    {% endif %}
+	  </li>
+	</ul>
 </nav>
