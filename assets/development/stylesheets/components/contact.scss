@@ -2,22 +2,93 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .contact {
-  background-color: $dark-color;
+  background-color: $darker-middle-color;
+
   padding-top: 4rem;
   padding-bottom: 4rem;
+
+    padding-left: 2rem;
+  padding-right: 2rem;
+
+  @media (min-width: 761px) {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
 }
     .contact h2 {
       padding: 0;
-      margin: 0;
+      margin: 0 0 2rem;
       color: #fff;
-      
     }
 
-    #got-your-email .confirmation {
-  display: none;
-}
+    .contactform-container {
+      @include flexbox();
+      @include flexdirection(column);
+      -webkit-justify-content: space-between;
+      justify-content: space-between;
 
-#got-your-email:target .confirmation {
-  display: inherit;
-  color: white;
-}
+      @media (min-width: 761px) {
+        @include flexdirection(row);
+      }
+
+      .flex-2up, .flex-1up {
+        @include flex(1);
+        margin-bottom: 1rem;
+      }
+    }
+
+      .contactform-container .flex-2up {
+        
+        @media (min-width: 761px) {
+          margin-right: 1rem;
+
+          &:last-of-type {
+            margin-right: 0;
+          }
+        }
+
+      }
+
+  .contactform input, .contactform textarea {
+    padding: 1rem;
+    background-color: $lighter-middle-color;
+    font-family: $font-mono;
+    font-weight: $font-weight-mono-light;
+    font-size: 1.4rem;
+    color: #fff;
+    border: none;
+    outline: none;
+
+    &:focus {
+      outline: 1px solid $brand-color;
+      // outline-offset: -2px;
+      border: None;
+    }
+  }
+
+  .contactform button {
+    background-color: $brand-color;
+    border: 0;
+    outline: 0;
+    margin: 0;
+    padding: 1rem 2rem 0.8rem;
+    font-family: $font-mono;
+    font-weight: $font-weight-mono-light;
+    text-transform: uppercase;
+    line-height: 1.6rem;
+    color: $darkest-color;
+
+    &:hover {
+      background-color: $darkest-color;
+      color: #fff;
+    }
+  }
+
+  .email-confirmation {
+    display: none;
+  }
+
+  #got-your-email:target .email-confirmation {
+    display: inherit;
+    color: white;
+  }
