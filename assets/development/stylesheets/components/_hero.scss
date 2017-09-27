@@ -13,7 +13,7 @@
   width: 7rem;
 }
 
-.slogan, .dek {
+.slogan, .hero .dek {
   max-width: 70rem;
   margin-top: 4rem;
 }
@@ -40,7 +40,7 @@
   }
 }
 
-.dek {
+.hero .dek {
   font-weight: $font-weight-sans-book;
   font-size: 1.8rem;
   color: #fff;
