@@ -1,0 +1,23 @@
+/* contact
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.contact {
+  background-color: $dark-color;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+    .contact h2 {
+      padding: 0;
+      margin: 0;
+      color: #fff;
+      
+    }
+
+    #got-your-email .confirmation {
+  display: none;
+}
+
+#got-your-email:target .confirmation {
+  display: inherit;
+  color: white;
+}

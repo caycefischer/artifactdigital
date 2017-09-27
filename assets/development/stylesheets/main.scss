@@ -107,11 +107,28 @@ body {
   }
 }
 
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0 0 2rem 0;
+  padding: 0;
+  font-family: $font-mono;
+  font-weight: $font-weight-mono-bold;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: 0.1px;
+}
+
 /* components
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @import "components/navbar";
 @import "components/hero";
 @import "components/services";
+@import "components/contact";
 
 /* one-off stylin
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
