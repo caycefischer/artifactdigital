@@ -86,9 +86,21 @@
 
   .email-confirmation {
     display: none;
+    margin: 2rem 0 0;
   }
 
   #got-your-email:target .email-confirmation {
     display: inherit;
     color: white;
+  }
+
+  hr {
+    border: 1px solid $darkest-color;
+    margin: 4rem 0;
+  }
+
+  .contactinfo {
+    color: #eee;
+    font-family: $font-mono;
+    font-weight: $font-weight-mono-light;
   }
