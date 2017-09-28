@@ -11,10 +11,16 @@
 }
 
   .headshot {
-    display: inline-block;
-    max-width: 18rem;
-    margin-right: 6rem;
+    display: block;
+    margin: 0 auto;
+    max-width: 30rem;
     vertical-align: middle;
+
+    @media (min-width: 761px) {
+      max-width: 18rem;
+      display: inline-block;
+      margin-right: 4rem;
+    }
 
     @media (min-width: 1084px) {
       max-width: 20rem;

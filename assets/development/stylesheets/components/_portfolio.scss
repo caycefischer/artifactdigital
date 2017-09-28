@@ -42,11 +42,13 @@
     
     @media (min-width: 700px) {
      @include flexdirection(row);
-      justify-content: space-between;
+      justify-content: space-around;
     }
   }
 
     .project {
+      -webkit-transition: all 1s linear 0s;
+  transition: all 1s linear 0s;
       width: 46%;
       min-width: 26rem;
       margin-bottom: 4rem;

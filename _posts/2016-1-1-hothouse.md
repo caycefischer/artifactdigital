@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Rainbow Gun (2015)
+title: HotHouse (2017)
 category: Exhibits
 thumb: http://placekitten.com/g/300/300
 thumbdescription: "this is a cat"
 ---
 
-RAINBOW GUNNNN
+HOT HOOS
