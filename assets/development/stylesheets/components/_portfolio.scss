@@ -5,29 +5,81 @@
   background-color: #fff;
   padding: 2rem;
 
-  @include flexbox();
-  @include flexdirection(column);
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-
   @media (min-width: 700px) {
-    @include flexdirection(row);
-    justify-content: space-between;
     padding: 4rem 8rem;
   }
 }
+  .category-menu {
+    list-style: none;
+    margin: 0 0 3rem;
+    padding: 0;
+    font-size: 0;
+  }
 
-  .project {
-    outline: 1px solid red;
-    width: 46%;
-    min-width: 26rem;
+    .category-item {
+      display: inline-block;
+      padding: 0.8rem;
+      margin: 0 1rem 1rem 0;
+      line-height: 1rem;
+      border-radius: 2px;
 
-    @media (min-width: 980px) {
-      width: 30%;
+      font-family: $font-mono;
+      font-weight: $font-weight-mono-light;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+
+      &.active {
+        background-color: $brand-color;
+      }
+    }
+
+  .portfolio .flexcontain {
+    @include flexbox();
+    @include flexdirection(column);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    @media (min-width: 700px) {
+     @include flexdirection(row);
+      justify-content: space-between;
     }
   }
 
-    .project-thumb {
-      width: 100%;
-    } 
+    .project {
+      width: 46%;
+      min-width: 26rem;
+      margin-bottom: 4rem;
+
+      @media (min-width: 980px) {
+        width: 30%;
+      }
+    }
+
+      .project-thumb {
+        width: 100%;
+      } 
+
+      .project a {
+        color: $darkest-color;
+        text-decoration: none;
+
+        &:hover, &:focus, &:active {
+          font-style: italic;
+
+          img {
+            outline: 0.5rem solid $brand-color;
+          }
+        }
+      }
+
+      .project-title {
+        margin: 1rem 0 0 0;
+        padding: 0;
+
+        font-family: $font-mono;
+        font-weight: $font-weight-mono-light;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: $darkest-color;
+      }

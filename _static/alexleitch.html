@@ -10,7 +10,7 @@ active: alexleitch
 	
 	<img src="{{ site.url }}/assets/production/images/headshot.jpg" alt="A portrait of Alex Leitch" class="headshot">
 
-	<h1 class="slogan2"><span>High</span><span>Technology,</span><span>Speculative</span><span>Futures,</span><span>Technical</span><span>Design.</span></h1>
+	<h1 class="slogan2"><span>Machine</span><span>Art,</span><span>Speculative</span><span>Futures,</span><span>Technical</span><span>Design.</span></h1>
 
 	<p class="dek">Alex Leitch (B.A.hon, M.Des) is an award-winning technology consultant who lives and works in Toronto, Canada. Alex is a writer, game designer, and software developer who runs a strategic design consultancy, Artifact Digital.</p>
 
@@ -18,13 +18,27 @@ active: alexleitch
 
 <section class="portfolio container">
 	
-	{% for project in site.projects %}
-	<article class="project">
-		<h2>{{ project.title }}</h2>
-    <a href="{{ site.baseurl }}{{ project.url }}">link to post</a>
-		<img class="project-thumb" src="{{ project.thumb }}" alt="{{ project.thumbdescription }}">
-		{{ project.content }}
-	</article>		
-  {% endfor %}	
+	<h2>Portfolio</h2>
+	<ul class="category-menu">
+		<li class="category-item active">All work</li>
+		<li class="category-item">Games</li>
+		<li class="category-item">Commercial</li>
+		<li class="category-item">Exhibits</li>
+		<li class="category-item">Speaking</li>
+	</ul>
+
+	<div class="flexcontain">
+		
+		{% for project in site.projects %}
+		<article class="project">
+	    <a href="{{ site.baseurl }}{{ project.url }}">
+				<img class="project-thumb" src="{{ project.thumb }}" alt="{{ project.thumbdescription }}">
+				<h3 class="project-title">{{ project.title }}</h3>
+	    </a>
+			<!-- {{ project.content }} -->
+		</article>		
+	  {% endfor %}	
+	
+	</div>
 
 </section>
