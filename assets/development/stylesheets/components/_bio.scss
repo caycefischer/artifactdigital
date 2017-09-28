@@ -7,6 +7,7 @@
   padding-top: 6rem;
   background-color: #F2F2F2;
   vertical-align: middle;
+
 }
 
   .headshot {
@@ -23,9 +24,8 @@
   .slogan2 {
     display: inline-block;
     vertical-align: middle;
-    margin: 0;
+    margin: 4rem 0 0;
     padding: 0;
-    max-width: 39rem;
     font-size: 3.2rem;
     font-family: $font-sans;
     font-weight: $font-weight-sans-light;
@@ -42,12 +42,10 @@
     }
 
     @media (min-width: 761px) {
+      margin: 0;
       font-size: 3.6rem;
+      max-width: 39rem;
     }
-
-    // @media (min-width: 915px) {
-    //   max-width: 64rem;
-    // }
 
     @media (min-width: 1084px) {
       font-size: 4rem;
@@ -57,33 +55,11 @@
   }
 
   .bio .dek {
-    color: $darkest-color;
+    color: $dark-color;
     font-weight: $font-weight-sans-book;
     font-size: 1.8rem;
     -webkit-font-smoothing: antialiased;
     display: block;
-    margin-top: 2rem;
+    margin-top: 4rem;
+    max-width: 80rem;
   }
-
-
-// .hero {
-//   background: $dark-color url('/assets/production/images/bg.jpg') center center no-repeat;
-//   background-size: cover;
-//   background-attachment: fixed;
-//   padding-bottom: 6rem;
-//   padding-top: 6rem;
-// }
-
-// .logomark {
-//   width: 7rem;
-// }
-
-// .slogan, .dek {
-//   max-width: 70rem;
-//   margin-top: 4rem;
-// }
-
-
-// .dek {
-//   color: #fff;
-// }

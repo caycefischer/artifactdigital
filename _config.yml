@@ -21,6 +21,9 @@ title: Artifact Digital – Strategic Design Consultancy – Alex Leitch
 description: > # this means to ignore newlines until "baseurl:"
   Future problems solved, fires put out
 
+collections:
+  - projects
+  
 author:
   name:    'Alex Leitch'
   twitter: aeleitch

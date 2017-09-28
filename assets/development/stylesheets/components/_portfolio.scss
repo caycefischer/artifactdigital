@@ -1,0 +1,33 @@
+/* portfolio
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.portfolio {
+  background-color: #fff;
+  padding: 2rem;
+
+  @include flexbox();
+  @include flexdirection(column);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 700px) {
+    @include flexdirection(row);
+    justify-content: space-between;
+    padding: 4rem 8rem;
+  }
+}
+
+  .project {
+    outline: 1px solid red;
+    width: 46%;
+    min-width: 26rem;
+
+    @media (min-width: 980px) {
+      width: 30%;
+    }
+  }
+
+    .project-thumb {
+      width: 100%;
+    } 
