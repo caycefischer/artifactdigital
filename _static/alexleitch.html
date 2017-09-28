@@ -17,36 +17,26 @@ active: alexleitch
 </section>
 
 <section class="portfolio container">
-	
 
-<div class="button-group filter-button-group" id="filters">
-	{% for category in site.portfolio-categories %}
-		<a class="button" data-filter=".{{ category }}">{{ category }}</a>
-	{% endfor %}
-		<a class="button active" data-filter="*">All work</a>
-</div> 
+	<h2>Selected work</h2>
 
- <div class="grid flexcontain">
- 	<!-- <div class="grid-sizer"></div> -->
-	{% for project in site.projects %}
-  <div class="project element-item {{ project.category }}">
-    <a href="{{ site.baseurl }}{{ project.url }}">
-			<img class="project-thumb" src="{{ project.thumb }}" alt="{{ project.thumbdescription }}">
-			<h3 class="project-title">{{ project.title }}</h3>
-    </a>
-  </div>
-  {% endfor %}
-</div> 
-
-
-
-<!-- 	<h2>Portfolio</h2>
-	<ul class="category-menu">
-		<li class="category-item active">All work</li>
-		<li class="category-item">Games</li>
-		<li class="category-item">Commercial</li>
-		<li class="category-item">Exhibits</li>
-		<li class="category-item">Speaking</li>
-	</ul> -->
+<div class="derp sort-section">
+    <div class="tag-container">
+        <button class="selected" data-filter="all">all</button>
+	    	{% for category in site.portfolio-categories %}
+				<button data-filter="{{ category }}">{{ category }}</button>
+				{% endfor %}
+    </div>
+    <div class="boxes">
+				{% for project in site.projects %}
+			  <div class="project box {{ project.category }}">
+			    <a href="{{ site.baseurl }}{{ project.url }}">
+						<img class="project-thumb" src="{{ project.thumb }}" alt="{{ project.thumbdescription }}">
+						<h3 class="project-title">{{ project.title }}</h3>
+			    </a>
+			  </div>
+			  {% endfor %}
+    </div>
+</div>
 
 </section>

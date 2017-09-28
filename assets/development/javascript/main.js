@@ -1,120 +1,40 @@
 $(document).ready(function(e){
 
+// code i ripped from here [https://codepen.io/MandyMadeThis/pen/dGQxaN]
+// to get project toggle-filtering working
 
-Isotope.Item.prototype._create = function() {
-  // assign id, used for original-order sorting
-  this.id = this.layout.itemGUID++;
-  // transition objects
-  this._transn = {
-    ingProperties: {},
-    clean: {},
-    onEnd: {}
-  };
-  this.sortData = {};
-};
+var box = $('.box'),
+    boxContainer = $('.boxes'),
+    section = $('.sort-section'),
+    containerHeight = $('.adjustable-height'),
+    boxClassFilter,
+    showThese;
 
-Isotope.Item.prototype.layoutPosition = function() {
-  this.emitEvent( 'layout', [ this ] );
-};
+$('button').on('click', function(){  
+    boxClassFilter = $(this).data('filter');
+    showThese = boxContainer.find('.box' + '.' + boxClassFilter);
+    var sectionHeight = section.height();
 
-Isotope.prototype.arrange = function( opts ) {
-  // set any options pass
-  this.option( opts );
-  this._getIsInstant();
-  // just filter
-  this.filteredItems = this._filter( this.items );
-  // flag for initalized
-  this._isLayoutInited = true;
-};
+    $('.tag-container').find('button.selected').removeClass();
+    $(this).toggleClass('selected');
+    
+    var tl = new TimelineLite()
+    .to(box, 0.5, {scale:0, opacity:0, ease: Power3.easeOut})
+    .set(box, {display:'none'})
+    .set(showThese, {display:'block'})
+    .to(showThese, 0.8, {scale:1, opacity:1, ease: Power3.easeOut}, '+=0.1')
+    .fromTo(section, 1, {height:'sectionHeight', ease: Power3.easeOut},  {height:'initial', ease: Power3.easeIn}, '-=1');
 
-// layout mode that does not position items
-Isotope.LayoutMode.create('none');
-
-
-// --------------- //
-
-// init Isotope
-var $grid = $('.grid').isotope({
-  itemSelector: '.element-item',
-  layoutMode: 'none'
+    if (boxClassFilter == 'all') {    
+        var allTL = new TimelineLite()
+            .set(section, {height:sectionHeight})
+            .to(box, 0.5, {scale:0, opacity:0, ease: Power3.easeOut})
+            .set(box, {display:'none'})
+            .set(box, {display:'block'})
+            .to(box, 0.8, {scale:1, opacity:1, ease: Power3.easeOut}, '+=0.1')
+           .fromTo(section,1 , {height:'sectionHeight', ease: Power3.easeOut},  {height:'initial', ease: Power3.easeIn}, '-=1');
+    }
+          
 });
-// filter functions
-var filterFns = {
-  // show if number is greater than 50
-  numberGreaterThan50: function() {
-    var number = $(this).find('.number').text();
-    return parseInt( number, 10 ) > 50;
-  },
-  // show if name ends with -ium
-  ium: function() {
-    var name = $(this).find('.name').text();
-    return name.match( /ium$/ );
-  }
-};
-// filter items on button click
-$('.filter-button-group').on( 'click', 'a', function() {
-  var filterValue = $(this).attr('data-filter');
-  $grid.isotope({ filter: filterValue });
-});
-$('.button-group a.button').on('click', function(){
-  $('.button-group a.button').removeClass('active');
-  $(this).addClass('active');
-});
-
-
-
-
-
-
-
-// init Isotope
-// var $grid = $('.grid').imagesLoaded( function() {
-//   // init Isotope after all images have loaded
-//   $grid.isotope({
-//     itemSelector: '.element-item',
-//     percentPosition: true,
-//     masonry: {
-//       // use element for option
-//       columnWidth: '.grid-sizer',
-//       gutter: 20
-//     }
-//   });
-// });
-// // filter items on button click
-// $('.filter-button-group').on( 'click', 'a', function() {
-//   var filterValue = $(this).attr('data-filter');
-//   $grid.isotope({ filter: filterValue });
-// });
-// $('.button-group a.button').on('click', function(){
-//   $('.button-group a.button').removeClass('active');
-//   $(this).addClass('active');
-// });
-
-
-
-
- //  $("#request-menu").on("click", function(e){
-	// 	if ($(".menu-items").hasClass("visible")){
-	// 		$(".menu-items").fadeOut();
-	// 		$(".menu-items").removeClass("visible");
-	// 	} else {
-	// 		$(".menu-items").fadeIn();
-	// 		$(".menu-items").addClass("visible");
-	// 	}
-	// });
-
-  // $(window).on("resize", function(e){
-  //   if ($(window).width() > 800) {
-  //     $(".menu-items").show();
-  //   }
-  // })
-
-  // if ($("#search-results").length) {
-  //   var results = $("#search-results").children();
-  //   if (!results.length) {
-  //     var searchPrompter = "<li>Search for something in the search box at the top of the page!</li>"
-  //     $("#search-results").append(searchPrompter);
-  //   };
-  // };
 
 });
