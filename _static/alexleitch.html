@@ -30,7 +30,7 @@ active: alexleitch
     <div class="boxes">
 				{% for project in site.projects %}
 			  <div class="project box {{ project.category }}">
-			    <a href="{{ site.baseurl }}{{ project.url }}">
+			    <a class="tapme" href="{{ site.baseurl }}{{ project.url }}#project">
 						<img class="project-thumb" src="{{ project.thumb }}" alt="{{ project.thumbdescription }}">
 						<h3 class="project-title">{{ project.title }}</h3>
 			    </a>

@@ -153,10 +153,15 @@ h2 {
 @import "components/contact";
 @import "components/bio";
 @import "components/portfolio";
+@import "components/projectpage";
 
 /* one-off stylin
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .tightkern {
   letter-spacing: -3px;
   padding-right: 1.5px;
+}
+
+.hiddenmodal {
+  display: none;
 }

@@ -13,14 +13,13 @@
       padding-left: 6rem;
     }
   }
+  
+  background-color: $middle-color;
 
   &.homepage {
     background-color: $darkest-color;
   }
 
-  &.alexleitch {
-    background-color: $middle-color;
-  }
 }
 
   .navbar-list {

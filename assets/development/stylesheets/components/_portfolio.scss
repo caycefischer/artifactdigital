@@ -108,7 +108,7 @@
             margin: 0 1%;
             text-transform: uppercase;
             &.selected {
-                background: chartreuse;
+                background: $brand-color;
             }
         }
         .boxes {
@@ -122,9 +122,12 @@
             visibility: visible;
             width: 20vw;
             height: 20vw;
-            padding: 1%;
             margin: 1%;
-            background: mediumslateblue;
+
+            @media (max-width: 700px) {
+              width: 40vw;
+              height: 40vw;
+            }
             &.pink {
                 background: pink;
             }

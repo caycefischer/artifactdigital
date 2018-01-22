@@ -22,7 +22,8 @@ description: > # this means to ignore newlines until "baseurl:"
   Future problems solved, fires put out
 
 collections:
-  - projects
+  projects:
+    output: true
   
 portfolio-categories:
   - Games
@@ -34,13 +35,6 @@ author:
   name:    'Alex Leitch'
   twitter: aeleitch
   github:  pretentiousgit
-
-  # This photo will be used in the about section
-  photo:   http://somewebsite.com/my_awesome_image.jpg
-
-  # Markdown enabled, can use multiple paragraphs (enabled by `|`)
-  about:          |
-    Your author description here.
 
 # Build settings
 markdown: kramdown
