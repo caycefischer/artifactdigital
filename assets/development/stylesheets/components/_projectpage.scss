@@ -105,4 +105,26 @@
 }
 
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
+  li:before {
+    margin-left: -0.5rem;
+    content: '□';
+    padding-right: 0.5rem;
+  }
+
+  li {
+    margin-bottom: 1rem;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

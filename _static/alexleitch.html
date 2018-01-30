@@ -28,7 +28,8 @@ active: alexleitch
 				{% endfor %}
     </div>
     <div class="boxes">
-				{% for project in site.projects %}
+    			{% assign sorted = (site.projects | sort: 'date') | reverse %}
+				{% for project in sorted %}
 			  <div class="project box {{ project.category }}">
 			    <a class="tapme" href="{{ site.baseurl }}{{ project.url }}#project">
 						<img class="project-thumb" src="{{ project.thumb }}" alt="{{ project.thumbdescription }}">

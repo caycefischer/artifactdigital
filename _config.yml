@@ -26,10 +26,10 @@ collections:
     output: true
   
 portfolio-categories:
-  - Games
-  - Commercial
+  - Code
   - Exhibits
   - Speaking
+  - Writing
 
 author:
   name:    'Alex Leitch'
