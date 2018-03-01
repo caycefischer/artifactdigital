@@ -3,7 +3,7 @@ layout: post
 title: Nebula Space Derby (2017)
 date: 2017-01-01
 category: Code
-thumb: http://placekitten.com/g/300/300
+thumb: "/assets/production/images/projects/nebulaspacederby/2017-nebula-derby.jpg"
 
 ---
 
@@ -12,3 +12,5 @@ The Nebula Space Derby is an interactive game driven using OSC controls to a Nod
 <ul>
 	<li><a href="http://zeenoks.com/">http://zeenoks.com/</a></li>
 </ul>
+
+<img src="/assets/production/images/projects/nebulaspacederby/2017-nebula-derby.jpg" alt="Nebula Space Derby">

@@ -3,8 +3,7 @@ layout: post
 title: Rainbow Gun (2012)
 date: 2012-01-01
 category: Exhibits
-thumb: http://placekitten.com/g/300/300
-thumbdescription: "this is a cat"
+thumb: "/assets/production/images/projects/rainbowgun/RainbowGunReservoirs.jpg"
 ---
 
 ## The Rainbow Gun - Firefly Festival VT 2012
