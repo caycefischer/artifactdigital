@@ -13,7 +13,7 @@ permalink:        pretty
 # url:
 
 # Set to '' in case of hosting on `http://<your-github-name>.github.io`
-baseurl:          'http://artifact-interactive.github.io/artifact.digital/'
+baseurl:          'http://artifact-interactive.github.io/artifact.digital'
 
 # Site settings
 title: Artifact Digital – Strategic Design Consultancy – Alex Leitch
